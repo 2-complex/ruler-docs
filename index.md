@@ -1,6 +1,6 @@
 ## What is Ruler?
 
-Ruler is a command-line tool not unlike Make or Ninja.  It helps deal with any project where some files are soure and some are target, and targets need to update when sources change.  It takes as input a `.rules` file describing:
+Ruler is a command-line tool not unlike Make or Ninja.  It helps deal with any project where some files are sources and some are targets, and targets need to update when sources change.  It takes as input a `.rules` file describing:
 
 - The dependence relationship between files
 - For each target, a command to update
