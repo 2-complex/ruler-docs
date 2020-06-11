@@ -10,7 +10,7 @@ When invoked, Ruler reads in a .rules file, makes a determination which files ne
 
 ### Anatomy of a .rules file
 
-A .rules file contains newline-separated blocks called <b>rules</b>.  Each rule consists of three sections: <b>targets</b>, <b>sources</b> and <b>command</b>.  <b>Targets</b> and <b>sources</b>b> are newline-separated lists of file paths.  <b>Command</b> is a command-line invocation meant to update the targets using sources as input.  Each section is terminated by a single “:” alone on a line.  For example, a rule might look like this:
+A .rules file contains newline-separated blocks called <b>rules</b>.  Each rule consists of three sections: <b>targets</b>, <b>sources</b> and <b>command</b>.  <b>Targets</b> and <b>sources</b> are newline-separated lists of file paths.  <b>Command</b> is a command-line invocation meant to update the targets using sources as input.  Each section is terminated by a single “:” alone on a line.  For example, a rule might look like this:
 
 ```txt
 hello.exe
