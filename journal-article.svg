@@ -1,0 +1,91 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-5 -10 80.0 105.0"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path id="file" d="M  1,  1 l  0,  10 l  8,  0 l  0, -8 l -2, -2 l -6,  0 M  7,  1 l  0,  2 l  2,  0 " />
+        <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+          <path d="M0,0 L0,6 L9,3 z" fill="#eef" />
+        </marker>
+    </defs>
+
+
+<rect x="-5" y="-5" width="80.0" height="85.0" style="fill:#223;stroke-width:0;stroke:rgb(0,0,0)" />
+    
+
+    <use xlink:href="#file"
+        stroke="#dde" stroke-linecap="round" stroke-width="0.2" fill="#111"
+        transform="translate(30.0 0.0)" />
+
+    <text x="35.0" y="13.1" font-family="sans-serif" font-size="2px" text-anchor="middle" fill="#eef">data.csv</text>
+    
+        <text x="35.0" y="7.0" font-family="sans-serif" font-size="2.5px" font-weight="bold"
+        text-anchor="middle" fill="#333">CSV</text>
+    
+
+    <use xlink:href="#file"
+        stroke="#dde" stroke-linecap="round" stroke-width="0.2" fill="#111"
+        transform="translate(50.0 0.0)" />
+
+    <text x="55.0" y="13.1" font-family="sans-serif" font-size="2px" text-anchor="middle" fill="#eef">make_chart.py</text>
+    
+        <text x="55.0" y="7.0" font-family="sans-serif" font-size="2.5px" font-weight="bold"
+        text-anchor="middle" fill="#333">PY</text>
+    
+
+    <use xlink:href="#file"
+        stroke="#dde" stroke-linecap="round" stroke-width="0.2" fill="#111"
+        transform="translate(0.0 30.0)" />
+
+    <text x="5.0" y="43.1" font-family="sans-serif" font-size="2px" text-anchor="middle" fill="#eef">fig1.eps</text>
+    
+        <text x="5.0" y="37.0" font-family="sans-serif" font-size="2.5px" font-weight="bold"
+        text-anchor="middle" fill="#333">EPS</text>
+    
+
+    <use xlink:href="#file"
+        stroke="#dde" stroke-linecap="round" stroke-width="0.2" fill="#111"
+        transform="translate(20.0 30.0)" />
+
+    <text x="25.0" y="43.1" font-family="sans-serif" font-size="2px" text-anchor="middle" fill="#eef">fig2.eps</text>
+    
+        <text x="25.0" y="37.0" font-family="sans-serif" font-size="2.5px" font-weight="bold"
+        text-anchor="middle" fill="#333">EPS</text>
+    
+
+    <use xlink:href="#file"
+        stroke="#dde" stroke-linecap="round" stroke-width="0.2" fill="#111"
+        transform="translate(40.0 30.0)" />
+
+    <text x="45.0" y="43.1" font-family="sans-serif" font-size="2px" text-anchor="middle" fill="#eef">chart.png</text>
+    
+        <text x="45.0" y="37.0" font-family="sans-serif" font-size="2.5px" font-weight="bold"
+        text-anchor="middle" fill="#333">PNG</text>
+    
+
+    <use xlink:href="#file"
+        stroke="#dde" stroke-linecap="round" stroke-width="0.2" fill="#111"
+        transform="translate(60.0 30.0)" />
+
+    <text x="65.0" y="43.1" font-family="sans-serif" font-size="2px" text-anchor="middle" fill="#eef">article.tex</text>
+    
+        <text x="65.0" y="37.0" font-family="sans-serif" font-size="2.5px" font-weight="bold"
+        text-anchor="middle" fill="#333">TEX</text>
+    
+
+    <use xlink:href="#file"
+        stroke="#dde" stroke-linecap="round" stroke-width="0.2" fill="#111"
+        transform="translate(30.0 60.0)" />
+
+    <text x="35.0" y="73.1" font-family="sans-serif" font-size="2px" text-anchor="middle" fill="#eef">article.pdf</text>
+    
+        <text x="35.0" y="67.0" font-family="sans-serif" font-size="2.5px" font-weight="bold"
+        text-anchor="middle" fill="#333">PDF</text>
+    
+<line x1="36.2649110641" y1="14.9486832981" x2="43.7350889359" y2="29.0513167019" stroke="#eef" stroke-width="0.4" marker-end="url(#arrow)" />
+<line x1="53.7350889359" y1="14.9486832981" x2="46.2649110641" y2="29.0513167019" stroke="#eef" stroke-width="0.4" marker-end="url(#arrow)" />
+<line x1="7.82842712475" y1="44.7071067812" x2="32.1715728753" y2="59.2928932188" stroke="#eef" stroke-width="0.4" marker-end="url(#arrow)" />
+<line x1="26.2649110641" y1="44.9486832981" x2="33.7350889359" y2="59.0513167019" stroke="#eef" stroke-width="0.4" marker-end="url(#arrow)" />
+<line x1="43.7350889359" y1="44.9486832981" x2="36.2649110641" y2="59.0513167019" stroke="#eef" stroke-width="0.4" marker-end="url(#arrow)" />
+<line x1="62.1715728753" y1="44.7071067812" x2="37.8284271247" y2="59.2928932188" stroke="#eef" stroke-width="0.4" marker-end="url(#arrow)" />
+
+</svg>

@@ -1,0 +1,17 @@
+data.csv: 30, 0
+make_chart.py: 50, 0
+
+fig1.eps: 0, 30
+fig2.eps: 20, 30
+chart.png: 40, 30
+article.tex: 60, 30
+
+article.pdf: 30, 60
+
+data.csv -> chart.png
+make_chart.py -> chart.png
+
+fig1.eps -> article.pdf
+fig2.eps -> article.pdf
+chart.png -> article.pdf
+article.tex -> article.pdf
