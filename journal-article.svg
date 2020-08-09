@@ -9,7 +9,7 @@
     </defs>
 
 
-<rect x="-5" y="-5" width="80.0" height="85.0" style="fill:#223;stroke-width:0;stroke:rgb(0,0,0)" />
+<rect x="-5" y="-5" width="80.0" height="85.0" style="stroke-width:0;stroke:rgb(0,0,0)" />
     
 
     <use xlink:href="#file"

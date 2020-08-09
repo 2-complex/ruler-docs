@@ -1,6 +1,6 @@
 ## What is a Dependence Graph?
 
-A <b>dependence graph</b> is a diagram showing files linked by arrows.  Each arrow indicates a dependence between files, in other words: the file at the front of the arrow (called a <b>target</b>) must update whenever the file at the back of the arrow (called a <b>source</b>) changes.  Such a diagram comes in handy in all kinds of scenarios.  Here is an example.
+A <b>dependence graph</b> is a diagram showing files linked by arrows.  Each arrow indicates a dependence between files, in other words: the file at the front of the arrow (called a <b>target</b>) must update whenever the file at the back of the arrow (called a <b>source</b>) changes.  Such a diagram comes in handy in many situations.  Here is an example.
 
 Suppose you are writing a scientific journal article.  The finished article is a PDF, but that PDF is made by assembling text and visuals stored in other files.  There are figures made in a drawing program, a chart showing experimental data, and a LaTeX file describing the final product.
 
@@ -19,7 +19,7 @@ pdflatex article.tex
 
 This is the dependence graph:
 
-<img src = "journal-article.svg">
+<img width = 70% src = "journal-article.svg">
 
 Recall an arrow means that the file in front needs to update when the file in back changes.  If a source file changes, following the arrows reveals what need to update in reponse.  Suppose we add more experimental data to `data.csv`, this should prompt a change to `chart.png` and that change should be incorporated into `article.pdf`.  So, we should run:
 
