@@ -14,6 +14,7 @@ def unit(x, y):
 def svg_head():
     return """
 <svg width="SVG_WIDTH" height="SVG_HEIGHT" xmlns="http://www.w3.org/2000/svg" viewBox="VIEW_BOX_X VIEW_BOX_Y VIEW_BOX_WIDTH VIEW_BOX_HEIGHT"
+    style="display: block;"
     xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs>
         <path id="file" d="M  1,  1 l  0,  10 l  8,  0 l  0, -8 l -2, -2 l -6,  0 M  7,  1 l  0,  2 l  2,  0 " />
@@ -25,7 +26,7 @@ def svg_head():
 
 def svg_background(minx, miny, maxx, maxy):
     s = """
-<rect x="X" y="Y" width="WIDTH" height="HEIGHT" fill-opacity="0.0" style="stroke-width:0;stroke:rgb(0,0,0)" />
+<rect x="X" y="Y" width="WIDTH" height="HEIGHT" fill-opacity="0.0" style="stroke-width:0; stroke:rgb(0,0,0)" />
     """
 
     return replace_with_dict(s, {
@@ -171,9 +172,9 @@ final = replace_with_dict("\n".join(svg_elements),
         "VIEW_BOX_X" : minx,
         "VIEW_BOX_Y" : miny - 5,
         "VIEW_BOX_WIDTH" : maxx-minx,
-        "VIEW_BOX_HEIGHT" : maxy-miny + 20,
+        "VIEW_BOX_HEIGHT" : maxy-miny + 5,
         "SVG_WIDTH" : scaleup * (maxx-minx),
-        "SVG_HEIGHT" : scaleup * (maxy-miny + 20),
+        "SVG_HEIGHT" : scaleup * (maxy-miny + 5),
     })
 
 out = open(args.output, "w")
