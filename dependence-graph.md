@@ -19,7 +19,7 @@ pdflatex article.tex
 
 This is the dependence graph:
 
-<img width = 70% src = "journal-article.svg">
+<img src = "journal-article.svg">
 
 Recall an arrow means that the file in front needs to update when the file in back changes.  If a source file changes, following the arrows reveals what need to update in reponse.  Suppose we add more experimental data to `data.csv`, this should prompt a change to `chart.png` and that change should be incorporated into `article.pdf`.  So, we should run:
 
