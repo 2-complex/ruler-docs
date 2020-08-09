@@ -13,7 +13,7 @@ def unit(x, y):
 
 def svg_head():
     return """
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="VIEW_BOX_X VIEW_BOX_Y VIEW_BOX_WIDTH VIEW_BOX_HEIGHT"
+<svg width="SVG_WIDTH" height="SVG_HEIGHT" xmlns="http://www.w3.org/2000/svg" viewBox="VIEW_BOX_X VIEW_BOX_Y VIEW_BOX_WIDTH VIEW_BOX_HEIGHT"
     xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs>
         <path id="file" d="M  1,  1 l  0,  10 l  8,  0 l  0, -8 l -2, -2 l -6,  0 M  7,  1 l  0,  2 l  2,  0 " />
@@ -164,6 +164,7 @@ for a in arrows:
 
 svg_elements.append(svg_tail())
 
+scaleup = 6
 
 final = replace_with_dict("\n".join(svg_elements),
     {
@@ -171,6 +172,8 @@ final = replace_with_dict("\n".join(svg_elements),
         "VIEW_BOX_Y" : miny - 5,
         "VIEW_BOX_WIDTH" : maxx-minx,
         "VIEW_BOX_HEIGHT" : maxy-miny + 20,
+        "SVG_WIDTH" : scaleup * (maxx-minx),
+        "SVG_HEIGHT" : scaleup * (maxy-miny + 20),
     })
 
 out = open(args.output, "w")
