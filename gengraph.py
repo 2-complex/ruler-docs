@@ -25,7 +25,7 @@ def svg_head():
 
 def svg_background(minx, miny, maxx, maxy):
     s = """
-<rect x="X" y="Y" width="WIDTH" height="HEIGHT" style="stroke-width:0;stroke:rgb(0,0,0)" />
+<rect x="X" y="Y" width="WIDTH" height="HEIGHT" fill-opacity="0.0" style="stroke-width:0;stroke:rgb(0,0,0)" />
     """
 
     return replace_with_dict(s, {

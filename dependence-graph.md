@@ -33,4 +33,3 @@ On the other hand, if our artist makes adjustments to `fig1.eps`, then we have t
 ```sh
 pdflatex article.tex
 ```
-

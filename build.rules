@@ -1,0 +1,9 @@
+journal-article.svg
+:
+gengraph.py
+art.files
+:
+python gengraph.py
+--files=art.files
+--output=journal-article.svg
+:
