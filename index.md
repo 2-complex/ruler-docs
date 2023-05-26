@@ -1,15 +1,21 @@
 ## What is Ruler?
 
-Ruler is a command-line build tool not unlike Make or Ninja.  Tools like these often get used for building software written in C/C++, but Ruler can also help manage any project that has a dependence graph of files.  A hypotheitcal example can be found here:
+Ruler is a command-line build tool like Make or Ninja.  Software developerms often use tools like these for complex C/C++ project, but Ruler can also help manage any project that has a dependence graph of files.  An example is discussed here:
 
 [What is a Dependence Graph](dependence-graph.md)
 
-When given a `.rules` file describing...
+Ruler uses config files with the extension `.rules`  A `.rules` describes:
 
-- The dependence relationship between files
-- For each target, a command to update
+- The relationship of dependence between files
+- For each target file, a command to update
 
-...Ruler determines which files need to update (and in what order), and runs the commands for those files only.
+When invoked like this:
+
+```sh
+ruler build
+```
+
+... Ruler determines which files need to update (and in what order), and runs the commands for those files only.
 
 
 ### Anatomy of a .rules file
@@ -28,7 +34,7 @@ hello.cpp
 :
 ```
 
-With the rulefile above, if hello.cpp is out of date, hello.exe rebuilds by this command:
+With the rule above, if hello.cpp is out of date, hello.exe rebuilds by this command:
 
 ```sh
 c++ --std=c++17 hello.cpp -o hello.exe
