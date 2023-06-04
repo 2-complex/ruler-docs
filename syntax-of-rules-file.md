@@ -1,4 +1,4 @@
-The syntax for a `.rules` file is fairly strict.  Here is an example `.rules` file:
+The syntax for a `.rules` file is rigid and uncomplicated.  Here is an example `.rules` file:
 
 ```txt
 math.o
