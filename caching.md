@@ -1,11 +1,11 @@
-Ruler aggressively caches build results instead of discarding them.  It does this by copying files into `.ruler/cache/`  Each file in `.ruler/cache/` has filename equal to the hash of its contents.  You can check this by running `ruler hash` on a file in that directory, and noting that the hash matches the filename:
+Ruler aggressively caches build results instead of discarding them.  It does this by copying files into `.ruler/cache/`  Each file in `.ruler/cache/` has filename equal to the hash of its contents.  You can check this by running `ruler hash` on a file in that directory. The hash will match the filename:
 
 ```sh
 $ ruler hash .ruler/cache/NeGiY-9MRikJ6sIVnvxA1K14rL4EfLvREUClMXx2Lt8=
 NeGiY-9MRikJ6sIVnvxA1K14rL4EfLvREUClMXx2Lt8=
 ```
 
-When performing a build, Ruler considers each rule, and uses the current state of the source files and target files to see if a target need to update.  At some point in the process, Ruler compares the current hash of the target file to what the hash should be for the current sources.  If the file has the wrong hash, Ruler checks the cache for a file with the right hash.  If that file exists, then instead of rebuilding, Ruler copies the file into place.  To see this in action, let's make an example project.
+For each rule in a build, Ruler compares the current hash of the target file to what the hash should be for the current sources.  If the file has the wrong hash, Ruler checks the cache for a file with the right hash.  If that file exists, then instead of rebuilding, Ruler moves the file into place.  To see this in action, let's make an example project.
 
 In the `poetry` directory, we have `line1.txt` and `line2.txt` like so:
 
@@ -21,7 +21,7 @@ Roses are red
 Violets are blue
 ```
 
-Then in the build.rules file, we have:
+<h3>build.rules</h3>
 
 ```
 poem.txt
@@ -36,7 +36,7 @@ line2.txt
 :
 ```
 
-Run `ruler build`, and Ruler will see that `poem.txt` does not exist and is therefore not up-to-date.  It will then invoke the cat command to append `line1.txt` to `line2.txt` and output to `poem.txt`
+Run `ruler build`, and Ruler will see that `poem.txt` does not exist and is therefore not up-to-date.  It therefore invokes the cat command to build `poem.txt`
 
 ```sh
 poetry $ ruler build
@@ -75,7 +75,7 @@ Roses are red
 Violets are violet
 ```
 
-Look in the cache.  The previous version of `poem.txt` is there, renamed to its hash:
+Now, look in the cache.  The previous version of `poem.txt` is there, renamed to its own hash:
 
 ```
 poetry $ ls .ruler/cache/
@@ -85,7 +85,7 @@ Roses are red
 Violets are blue
 ```
 
-In a different file in `.ruler/`, Ruler makes a note of the hash of `poem.txt` hash when it built the first time.  If we revert the source file and rebuild, Ruler will not rerun the build command for `poem.txt`.  Instead it will recover `poem.txt` from the cache.
+Elsewhere in `.ruler/`, Ruler records the hash of `poem.txt` when it built the first time.  If we revert the source file and rebuild, Ruler will not rerun the build command for `poem.txt`.  Instead it will recover `poem.txt` from the cache.
 
 Edit `line2.txt` to this:
 
