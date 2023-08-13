@@ -7,3 +7,13 @@ python gengraph.py
 --files=art.files
 --output=journal-article.svg
 :
+
+AB.svg
+:
+gengraph.py
+ab.files
+:
+python gengraph.py
+--files=ab.files
+--output=AB.svg
+:
